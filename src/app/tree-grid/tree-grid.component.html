@@ -1,0 +1,57 @@
+<p>tree-grid works!</p>
+<div class="control-section">
+  <ejs-treegrid
+    [dataSource]="data"
+    height="90vh"
+    [treeColumnIndex]="1"
+    allowPaging="true"
+    [pageSettings]="pageSettings"
+    [editSettings]="editSettings"
+    [toolbar]="toolbar"
+    [showColumnChooser]="true"
+  >
+    <e-columns>
+      <e-column
+        field="customerID"
+        headerText="Customer ID"
+        width="120"
+        textAlign="left"
+        isPrimaryKey="true"
+        [validationRules]="customerID"
+      ></e-column>
+      <e-column
+        field="customerName"
+        headerText="Customer Name"
+        width="150"
+        textAlign="left"
+        editType="stringedit"
+        [validationRules]="customerName"
+      ></e-column>
+      <e-column
+        field="customerEmail"
+        headerText="Customer Email"
+        width="150"
+        editType="stringedit"
+        textAlign="left"
+        [validationRules]="customerEmail"
+      ></e-column>
+      <e-column
+        field="customerPhone"
+        headerText="Customer Phone"
+        width="150"
+        editType="numericEdit"
+        textAlign="left"
+        [validationRules]="customerPhone"
+      ></e-column>
+      <e-column
+        field="customerAddress"
+        headerText="Customer Address"
+        width="110"
+        textAlign="left"
+        editType="stringedit"
+        [validationRules]="customerAddress"
+        [edit]="editParams"
+      ></e-column>
+    </e-columns>
+  </ejs-treegrid>
+</div>
